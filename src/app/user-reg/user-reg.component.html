@@ -1,0 +1,53 @@
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h3>User Registration</h3>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Employee name:</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Address:</label>
+                    <input name="address" [(ngModel)]="address" type="text" class="form-control">
+                </div>
+                
+                
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Phone no:</label>
+                    <input name="ph" [(ngModel)]="ph" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Email id:</label>
+                    <input name="email" [(ngModel)]="email" type="text" class="form-control">
+                </div>
+                
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Username:</label>
+                    <input name="uname" [(ngModel)]="uname" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Password:</label>
+                    <input name="psw" [(ngModel)]="psw" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Confirm Password:</label>
+                    <input name="cpsw" [(ngModel)]="cpsw" type="text" class="form-control">
+                </div>
+
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValues()" class="btn btn-success"href="/ul">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

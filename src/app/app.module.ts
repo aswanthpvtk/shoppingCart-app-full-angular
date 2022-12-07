@@ -11,6 +11,7 @@ import { ProAddComponent } from './pro-add/pro-add.component';
 import { AddViewComponent } from './add-view/add-view.component';
 import { AddSearchComponent } from './add-search/add-search.component';
 import { UserLogComponent } from './user-log/user-log.component';
+import { UserRegComponent } from './user-reg/user-reg.component';
 
 
 const myRoute:Routes=[
@@ -33,6 +34,10 @@ const myRoute:Routes=[
   {
     path:"ul",
     component:UserLogComponent
+  },
+  {
+    path:"ur",
+    component:UserRegComponent
   }
 ]
 @NgModule({
@@ -43,7 +48,8 @@ const myRoute:Routes=[
     ProAddComponent,
     AddViewComponent,
     AddSearchComponent,
-    UserLogComponent
+    UserLogComponent,
+    UserRegComponent
   ],
   imports: [
     BrowserModule,
