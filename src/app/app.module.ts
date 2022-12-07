@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { AdNavbarComponent } from './ad-navbar/ad-navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ProAddComponent } from './pro-add/pro-add.component';
 
 
 const myRoute:Routes=[
@@ -14,16 +15,17 @@ const myRoute:Routes=[
     path:"",
     component:AdminLoginComponent
   },
-  // {
-  //   path:"avc",
-  //   component:
-  // }
+  {
+    path:"aad",
+    component:ProAddComponent
+  }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AdNavbarComponent
+    AdNavbarComponent,
+    ProAddComponent
   ],
   imports: [
     BrowserModule,
