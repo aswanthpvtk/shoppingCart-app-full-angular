@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AdNavbarComponent } from './ad-navbar/ad-navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProAddComponent } from './pro-add/pro-add.component';
+import { AddViewComponent } from './add-view/add-view.component';
 
 
 const myRoute:Routes=[
@@ -18,6 +19,10 @@ const myRoute:Routes=[
   {
     path:"aad",
     component:ProAddComponent
+  },
+  {
+    path:"av",
+    component:AddViewComponent
   }
 ]
 @NgModule({
@@ -25,7 +30,8 @@ const myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     AdNavbarComponent,
-    ProAddComponent
+    ProAddComponent,
+    AddViewComponent
   ],
   imports: [
     BrowserModule,
