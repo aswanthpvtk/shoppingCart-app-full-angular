@@ -9,6 +9,7 @@ import { AdNavbarComponent } from './ad-navbar/ad-navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProAddComponent } from './pro-add/pro-add.component';
 import { AddViewComponent } from './add-view/add-view.component';
+import { AddSearchComponent } from './add-search/add-search.component';
 
 
 const myRoute:Routes=[
@@ -23,6 +24,10 @@ const myRoute:Routes=[
   {
     path:"av",
     component:AddViewComponent
+  },
+  {
+    path:"as",
+    component:AddSearchComponent
   }
 ]
 @NgModule({
@@ -31,7 +36,8 @@ const myRoute:Routes=[
     AdminLoginComponent,
     AdNavbarComponent,
     ProAddComponent,
-    AddViewComponent
+    AddViewComponent,
+    AddSearchComponent
   ],
   imports: [
     BrowserModule,
