@@ -5,15 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
+import { AdNavbarComponent } from './ad-navbar/ad-navbar.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+  // {
+  //   path:"avc",
+  //   component:
+  // }
+]
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    AdNavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(myRoute),
     FormsModule
   ],
   providers: [],
