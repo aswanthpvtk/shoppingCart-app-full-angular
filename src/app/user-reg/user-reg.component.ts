@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-user-reg',
@@ -9,46 +10,46 @@ export class UserRegComponent {
 
   name=""
   address=""
-  ph=""
+  phone=""
   email=""
   uname=""
   psw=""
   cpsw=""
 
 
-
+constructor(private api:ApiService){}
   
   readValues=()=>
   {
-    // let data:any={"name":this.name,"address":this.address,"ph":this.ph,"email":this.email,"uname":this.uname,"psw":this.psw,"cpsw":this.cpsw}
-    // console.log(data)
-    // this.api.addCourse(data).subscribe(
-    //   (response:any)=>
-    //   {
-    //     console.log(response)
-    //     if (response.status == "success") {
+    let data:any={"name":this.name,"address":this.address,"phone":this.phone,"email":this.email,"uname":this.uname,"psw":this.psw,"cpsw":this.cpsw}
+    console.log(data)
+    this.api.adduser(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if (response.status == "success") {
 
-    //       alert("Successfully added")
+          alert("Successfully added")
   
-    //       this.name=""
+          this.name=""
   
-    //       this.address=""
+          this.address=""
 
-    //       this.ph=""
+          this.phone=""
           
-    //       this.email=""
+          this.email=""
   
-    //       this.uname=""
-    //       this.psw=""
-    //       this.cpsw=""
+          this.uname=""
+          this.psw=""
+          this.cpsw=""
   
-    //     } else {
+        } else {
   
-    //       alert("Something went wrong")
+          alert("Something went wrong")
   
-    //     }
-    //   }
-    // )
+        }
+      }
+    )
   }
 
 }

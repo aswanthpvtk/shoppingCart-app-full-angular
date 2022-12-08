@@ -12,6 +12,10 @@ import { AddViewComponent } from './add-view/add-view.component';
 import { AddSearchComponent } from './add-search/add-search.component';
 import { UserLogComponent } from './user-log/user-log.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MainNavComponent } from './main-nav/main-nav.component';
+
 
 
 const myRoute:Routes=[
@@ -38,6 +42,10 @@ const myRoute:Routes=[
   {
     path:"ur",
     component:UserRegComponent
+  },
+  {
+    path:"uv",
+    component:UserViewComponent
   }
 ]
 @NgModule({
@@ -49,13 +57,16 @@ const myRoute:Routes=[
     AddViewComponent,
     AddSearchComponent,
     UserLogComponent,
-    UserRegComponent
+    UserRegComponent,
+    UserViewComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Product Name:</label>
-                    <input type="text" class="form-control" name="title" [(ngModel)]="title">
+                    <input type="text" class="form-control" name="pname" [(ngModel)]="pname">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <button class="btn btn-success" (click)="readValues()">Search</button>
@@ -20,7 +20,7 @@
                         <thead>
                           <tr>
                             <th scope="col">Name</th>
-                            <th scope="col">Image</th>
+                            
                             <th scope="col">Description</th>
                             <th scope="col">Category</th>
                             <th scope="col">Price</th>
@@ -28,11 +28,11 @@
                         </thead>
                         <tbody>
                           <tr *ngFor="let i of searchData">
-                            <td>{{i.title}}</td>
+                            <td>{{i.pname}}</td>
                             <td>{{i.description}}</td>
-                            <td>{{i.duration}}</td>
-                            <td>{{i.date}}</td>
-                            <td>{{i.venue}}</td>
+                            <td>{{i.category}}</td>
+                            <td>{{i.price}}</td>
+                           
                           </tr>
                         </tbody>
                       </table>

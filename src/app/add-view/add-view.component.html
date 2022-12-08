@@ -10,7 +10,7 @@
                   <tr>
                     
                     <th scope="col">Name</th>
-                    <th scope="col">Image</th>
+                    
                     <th scope="col">Description</th>
                     <th scope="col">Category</th>
                     <th scope="col">Price</th>
@@ -19,11 +19,11 @@
                 <tbody>
                   <tr *ngFor="let i of courses">
                     
-                    <td>{{i.title}}</td>
-                    <td>{{i.discription}}</td>
-                    <td>{{i.duration}}</td>
-                    <td>{{i.date}}</td>
-                    <td>{{i.venue}}</td>
+                    <td>{{i.pname}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.category}}</td>
+                    <td>{{i.price}}</td>
+                    
                   </tr>
                 </tbody>
               </table>
