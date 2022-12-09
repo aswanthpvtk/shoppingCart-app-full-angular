@@ -31,4 +31,12 @@ export class ApiService {
     return this.http.post("http://localhost:8080/search",dataToSend)
   }
 
+  ulogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/userLogin",dataToSend)
+  }
+
+
+ 
+
 }

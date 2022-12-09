@@ -9,40 +9,13 @@ import { ApiService } from '../api.service';
 export class UserViewComponent {
 
 
-  pro = ""
-
-
-  constructor(private api: ApiService) {
+  constructor(private api:ApiService){
     api.fetchproduct().subscribe(
-      (response) => {
-        this.loading = false
-        this.products = response
-        console.log(response)
+      (response:any)=>{
+        this.data=response;
       }
     )
   }
+  data:any=[]
 
-  readValues = () => {
-    let data: any = {
-      "pro": this.pro
-    }
-    if (this.pro.length == 0) {
-      this.searchData = []
-    } else {
-      this.api.searchData(data).subscribe(
-        (response: any) => {
-          if (response.length == 0) {
-            this.searchData = []
-          } else {
-            this.searchData = response
-          }
-        }
-      )
-    }
-  }
-
-  
-  searchData: any = []
-  products: any = []
-  loading: boolean = true
 }

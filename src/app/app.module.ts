@@ -15,6 +15,8 @@ import { UserRegComponent } from './user-reg/user-reg.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
 
 
 
@@ -46,7 +48,12 @@ const myRoute:Routes=[
   {
     path:"uv",
     component:UserViewComponent
+  },
+  {
+    path:"us",
+    component:UsersearchComponent
   }
+
 ]
 @NgModule({
   declarations: [
@@ -59,7 +66,9 @@ const myRoute:Routes=[
     UserLogComponent,
     UserRegComponent,
     UserViewComponent,
-    MainNavComponent
+    MainNavComponent,
+    UserNavComponent,
+    UsersearchComponent
   ],
   imports: [
     BrowserModule,
