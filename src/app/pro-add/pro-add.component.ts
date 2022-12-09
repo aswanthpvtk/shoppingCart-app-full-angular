@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-pro-add',
@@ -7,45 +8,37 @@ import { Component } from '@angular/core';
 })
 export class ProAddComponent {
   pname=""
-  category=""
   img=""
+  category=""
   description=""
   price=""
+constructor(private api:ApiService){}
+  readValue=()=>{
+    let data:any={"pname":this.pname,"img":this.img,"category":this.category,"description":this.description,"price":this.price}
+    console.log(data)
+    this.api.addProduct(data).subscribe(
+      (response:any)=>{
+        if (response.status=="success") {
+          alert("Product added successfully")
+
+          this.pname=""
   
+          this.img=""
 
-
-
-  // constructor(private api:ApiService){}
-
-  readValues=()=>
-  {
-    // let data:any={"pname":this.pname,"img":this.img,"category":this.category,"description":this.description,"price":this.price}
-    // console.log(data)
-    // this.api.addCourse(data).subscribe(
-    //   (response:any)=>
-    //   {
-    //     console.log(response)
-    //     if (response.status == "success") {
-
-    //       alert("Successfully added")
-  
-    //       this.pname=""
-  
-    //       this.img=""
-
-    //       this.category=""
+          this.category=""
           
-    //       this.description=""
+          this.description=""
   
-    //       this.price=""
-  
-    //     } else {
-  
-    //       alert("Something went wrong")
-  
-    //     }
-    //   }
-    // )
+          this.price=""
+          
+        } else {
+          alert("something went wrong")
+        }
+      }
+    )
+
+    
   }
+  
 
 }

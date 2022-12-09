@@ -1,7 +1,7 @@
 
 
 
-
+<app-main-nav></app-main-nav>
 <div class="container">
     <div class="row">
         <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
@@ -22,7 +22,7 @@
                 
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Phone no:</label>
-                    <input name="ph" [(ngModel)]="ph" type="text" class="form-control">
+                    <input name="phone" [(ngModel)]="phone" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Email id:</label>
@@ -45,6 +45,10 @@
 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <button (click)="readValues()" class="btn btn-success"href="/ul">Register</button>
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a href="/ul">User login</a>
                 </div>
             </div>
         </div>

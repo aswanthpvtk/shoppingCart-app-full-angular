@@ -12,6 +12,13 @@ import { AddViewComponent } from './add-view/add-view.component';
 import { AddSearchComponent } from './add-search/add-search.component';
 import { UserLogComponent } from './user-log/user-log.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+
 
 
 const myRoute:Routes=[
@@ -38,7 +45,20 @@ const myRoute:Routes=[
   {
     path:"ur",
     component:UserRegComponent
+  },
+  {
+    path:"uv",
+    component:UserViewComponent
+  },
+  {
+    path:"us",
+    component:UsersearchComponent
+  },
+  {
+    path:"uf",
+    component:UserinfoComponent
   }
+
 ]
 @NgModule({
   declarations: [
@@ -49,13 +69,19 @@ const myRoute:Routes=[
     AddViewComponent,
     AddSearchComponent,
     UserLogComponent,
-    UserRegComponent
+    UserRegComponent,
+    UserViewComponent,
+    MainNavComponent,
+    UserNavComponent,
+    UsersearchComponent,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
