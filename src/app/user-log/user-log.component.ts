@@ -30,7 +30,7 @@ export class UserLogComponent {
           console.log(userId)
           localStorage.setItem("userinfo",userId)
           
-          this.route.navigate(["/uv"])
+          this.route.navigate(["/uf"])
         } else {
           alert(response.message)
         }

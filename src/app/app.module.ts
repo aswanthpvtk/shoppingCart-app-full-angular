@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { UsersearchComponent } from './usersearch/usersearch.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 
 
@@ -52,6 +53,10 @@ const myRoute:Routes=[
   {
     path:"us",
     component:UsersearchComponent
+  },
+  {
+    path:"uf",
+    component:UserinfoComponent
   }
 
 ]
@@ -68,7 +73,8 @@ const myRoute:Routes=[
     UserViewComponent,
     MainNavComponent,
     UserNavComponent,
-    UsersearchComponent
+    UsersearchComponent,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
